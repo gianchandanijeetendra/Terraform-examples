@@ -1,7 +1,16 @@
 #Variable declaration
+
+variable "env" {
+  description = "env: dev or pod"
+}
+
 variable "image" {
-  description = "image to be used by container"
-  default = "ghost:latest"
+  description = "Image for container"
+  type = "map"
+  default = {
+    dev = "ghost:latest"
+    prod = "ghost:alpine"
+  }
 }
 
 variable "name" {
