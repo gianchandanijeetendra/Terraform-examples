@@ -13,6 +13,5 @@ resource "docker_container" "container_id"{
     external = "80"
   }
 }
-
 #terraform plan
 #terraform apply (you can also make use of auto-approve)
